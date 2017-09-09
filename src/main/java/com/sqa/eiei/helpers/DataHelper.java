@@ -9,14 +9,10 @@ import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.*;
 
-import com.google.common.collect.Table.*;
-import com.sqa.jf.helpers.enums.*;
-import com.sqa.jf.helpers.exceptions.*;
-
 /**
  * DataHelper Class to handle reading data from different sources.
  *
- * @author Nepton, Jean-francois
+ * @author KHIN, EI EI
  * @version 1.0.0
  * @since 1.0
  */
