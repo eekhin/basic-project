@@ -72,7 +72,6 @@ public class Core {
 	}
 
 	private Logger getLog() {
-		// TODO Auto-generated method stub
 		return this.log;
 	}
 }
