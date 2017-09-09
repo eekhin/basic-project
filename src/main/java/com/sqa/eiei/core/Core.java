@@ -5,7 +5,10 @@
  */
 package com.sqa.eiei.core;
 
+import org.apache.log4j.*;
 import org.openqa.selenium.*;
+
+import com.sqa.eiei.helpers.*;
 
 /**
  * Core //ADDD (description of class)
@@ -25,6 +28,8 @@ public class Core {
 	protected WebDriver driver;
 
 	private BasicTest curTest;
+
+	private Logger log;
 
 	public Core(BasicTest test) {
 		this.curTest = test;
@@ -50,6 +55,10 @@ public class Core {
 		return this.driver;
 	}
 
+	public String getProp(String propName) {
+		return AutoBasics.getProp(propName, "src/main/resources/", "config.properties", getLog());
+	}
+
 	public boolean isElementPresent(By locator) {
 		return false;
 	}
@@ -60,5 +69,10 @@ public class Core {
 
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
+	}
+
+	private Logger getLog() {
+		// TODO Auto-generated method stub
+		return this.log;
 	}
 }
