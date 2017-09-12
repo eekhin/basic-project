@@ -4,50 +4,75 @@
   <artifactId>basic-project</artifactId>
   <version>1.0-SNAPSHOT</version>
   
-  <dependencies>
+ <properties>
+  		<testng.version>6.11</testng.version>
+  		<selenium-java.version>2.53.1</selenium-java.version>
+  		<log4j.version>1.2.17</log4j.version>
+  		<poi.version>3.15</poi.version>
+  		<poi-ooxml.version>3.15</poi-ooxml.version>
+  		<mysql-connector-java.version>5.1.39</mysql-connector-java.version>
+  		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+  		<java-src.version>1.8</java-src.version>
+  		<java-tar.version>1.8</java-tar.version>
+  		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+  		<user.name>Jean-francois</user.name>
+ </properties>
+  
+   
+ <dependencies>
+ 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
 	<dependency>
     	<groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>6.11</version>
-    <scope>test</scope>
-    	
-	</dependency>
+    	<artifactId>testng</artifactId>
+    	<version>${testing.version}</version>
+     	
+</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-	<dependency>
+<dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-java</artifactId>
-    	<version>2.53.1</version>
-	</dependency>
+    	<version>${selenium-java.version}</version>
+</dependency>
 			
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-	<dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
     	<groupId>org.apache.poi</groupId>
     	<artifactId>poi</artifactId>
-    	<version>3.15</version>
-	</dependency>
+    	<version>${poi.version}</version>
+</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-	<dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
     	<groupId>org.apache.poi</groupId>
     	<artifactId>poi-ooxml</artifactId>
-    	<version>3.15</version>
-	</dependency>
+    	<version>${poi-ooxml.version}</version>
+</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 	<dependency>
     	<groupId>log4j</groupId>
     	<artifactId>log4j</artifactId>
-    	<version>1.2.17</version>
+    	<version>${log4j.version}</version>
 	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
     	<groupId>mysql</groupId>
     	<artifactId>mysql-connector-java</artifactId>
-    	<version>5.1.39</version>
+    	<version>${mysql-connector-java.version}</version>
 	</dependency>
+			
+			
+	<!-- https://mvnrepository.com/artifact/com.saucelabs.selenium/sauce-ondemand-driver -->
+<dependency>
+    	<groupId>com.saucelabs.selenium</groupId>
+    	<artifactId>sauce-ondemand-driver</artifactId>
+   		<version>${sauce-ondemand.version}</version>
+    	
+</dependency>
+			
 			
 </dependencies>  
  <build>
@@ -55,7 +80,7 @@
  		<plugin>
  		<groupId>org.apache.maven.plugins</groupId>
  		<artifactId>maven-compiler-plugin</artifactId>
- 		<version>3.6.2</version>
+ 		<version>${maven-compiler-plugin.version}</version>
  		<configuration>
  			<source>1.8</source>
  			<target>1.8</target>
